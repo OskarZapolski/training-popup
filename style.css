@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.root {
+  --border-color: gray;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.02);
+  overflow-x: hidden;
+}
+.h1-wraper {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: sans-serif;
+  margin: 4%;
+  text-align: center;
+  background-color: yellow;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  row-gap: 5rem;
+}
+.product {
+  height: min-content;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.product:hover {
+  transform: scale(1.1);
+}
+img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 100%;
+  height: 20%;
+}
+.text {
+  margin: 3rem 2rem;
+  font-size: 2rem;
+}
+.popup {
+  position: fixed;
+  background-color: aqua;
+  width: 75vw;
+  height: 75vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(20px);
+}
+.blur {
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  backdrop-filter: blur(5px);
+}
+.hid {
+  display: none;
+}
