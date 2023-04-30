@@ -17,11 +17,13 @@ function HidPopup() {
 PRODUCTS.forEach((product, index) => {
   product.addEventListener("click", function (e) {
     POPUP.innerHTML = `
-    <img src="${IMGES[index].src}" alt="" class="img-popup" /><ul class="popup-list"><li class="text">${PRODUCTS_TEXT[index].innerText}</li><li class="text">${PRODUCTS_TEXT[index].innerText}</li><li class="text">${PRODUCTS_TEXT[index].innerText}</li></ul>`;
+    <img src="${IMGES[index].src}" alt="" class="img-popup" /><ul class="popup-list"><li class="text p-text">${PRODUCTS_TEXT[index].innerText}</li><li class="text p-text">${PRODUCTS_TEXT[index].innerText}</li><li class="text p-text">${PRODUCTS_TEXT[index].innerText}</li></ul>`;
     ShowPopup();
   });
 });
 
 BLUR.addEventListener("click", function (e) {
-  console.log(e);
+  if (e.target == BLUR) {
+    HidPopup();
+  }
 });
